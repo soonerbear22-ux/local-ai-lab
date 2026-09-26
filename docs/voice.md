@@ -2,20 +2,18 @@
 
 [Home](../README.md)
 
-## Recovered implementation
+## Historical implementation and result
 
-- Speech recognition: Faster-Whisper using the `base` model on the main Windows PC.
-- Speech synthesis: Kokoro-FastAPI CPU container on the main PC.
-- Selected voice during testing: `bm_daniel`.
-- Browser interface: isolated development Open WebUI with separate data.
-- Model during that test: `qwen3:14b`.
+The isolated voice test used Faster-Whisper `base` for speech recognition, `qwen3:14b` for generation, and Kokoro-FastAPI CPU with `bm_daniel` for speech output on the main PC.
 
-Production voice exhibited repetition. In the isolated development instance, the owner confirmed Daniel sounded better and remained clean during follow-up testing. This is a bounded test result; it does not prove a single root cause or establish that production was upgraded.
+The owner reported improved Daniel playback and cleaner follow-up replies in the separate development WebUI. Browser microphone access used a secure HTTPS context. This remains a historical listening test, not proof of a particular root cause or a production upgrade.
 
-## Browser access
+## September 26 observations
 
-Microphone access required a secure browser context. The history records using Tailscale Serve HTTPS and changing a foreground session to a persistent background mapping. Tailnet addresses and host-specific configuration are excluded.
+The morning review found production Open WebUI healthy and a Windows `kokoro-tts` container running. The historical voice-test container was absent from the inspected core-services inventory even though its saved HTTPS route remained configured.
 
-## Follow-up checks
+Current Whisper process state, exact endpoint settings, end-to-end voice behavior, and automatic recovery were not verified. A saved route or a running TTS container does not prove the full pipeline works.
 
-Verify production behavior separately, document pinned versions, measure STT and TTS latency, and test voice-service startup after reboot. Automatic startup of every voice component is not established by the recovered evidence.
+## Next validation
+
+Test microphone capture, transcription, response text, synthesis, and browser playback separately. Use a short fixed utterance and a longer reply. Record results without publishing private recordings. Verify startup after reboot before claiming recovery is complete.

@@ -1,25 +1,26 @@
-# Evidence and roadmap
+# Evidence record
 
 [Home](../README.md)
 
-Documentation reconstructed September 25, 2026 from the owner's statements, recovered project conversations, command output, and the local Homelab API source mirror.
+Updated September 26, 2026 from project conversations, the knowledge-expansion report/manifests, local ComfyUI files and logs, the deployed API source, and a fresh read-only audit. This is not an exhaustive export of every saved memory.
 
-| Claim | Evidence level | Limit |
+[Sanitized machine-readable summary](../evidence/2026-09-26-summary.json)
+
+| Capability | Evidence | Limit |
 | --- | --- | --- |
-| Ollama on main PC, WebUI on Basecamp | Owner confirmation and historical outputs | No fresh host audit in this publication task |
-| Qwen 35B selection | Owner confirmation plus local model-list output | No complete benchmark table recovered |
-| Voice integration | Setup record, service checks, owner listening tests | Isolated test instance; production equivalence not established |
-| Specialized profiles | Recorded configuration work | Current per-profile model assignments not rechecked |
-| Live diagnostic tools | Migration and Open WebUI test records, recovered source | Historical deployment evidence |
-| Image generation | Owner confirmation | Backend and reproducible example pending |
-| Power recovery | Owner-observed historical Pi/Windows test | Does not validate current Basecamp topology |
+| Split chat hosting | Owner confirmation and prior service output | No fresh model-performance run |
+| FLUX image generation | Saved editor graph, installed assets, successful ComfyUI logs, owner completion report | Sanitized graph not rerun; WebUI API export not included |
+| GPU embeddings | Recorded passthrough and TEI deployment; fresh 2560-dimension embedding request | No throughput benchmark |
+| Knowledge expansion | Morning 27-document / 135-chunk report; 28/28 targeted retrieval checks | Historical result |
+| Current retrieval | Later green collection, 101 points, successful semantic query | Only two baseline sources currently indexed |
+| Infrastructure audit | Seven component groups retrieved, three guests and eleven containers running | Dated state; not recovery/security assurance |
+| Voice | Historical listening tests; later partial service inventory | Full current voice path and reboot behavior unverified |
+| Assistant profiles | Recorded configuration history | Per-profile model assignments not freshly inspected |
 
-## Next work
+## Unresolved discrepancy
 
-- Export a sanitized image-generation configuration and a representative result.
-- Record reproducible model comparisons and exact runtime versions.
-- Validate startup and recovery for the current topology.
-- Document tested backup and restore procedures.
-- Review API privilege boundaries, authentication, and missing-metric handling.
+The morning report recorded 235 points. The later live source inventory found only `homelab-master.md` and `homelab-operations.md`, totaling 101. Processed runbooks survive. The cause and intent of the intervening change are unknown; no reingestion or database alteration was performed in this publication task.
 
-No planned item above is presented as completed. The recovered history is substantial but is not an exhaustive export of every ChatGPT memory or project conversation.
+## Next evidence to capture
+
+Reconcile the current source inventory, repeat selected retrieval checks, export a sanitized WebUI image API workflow, record controlled model/image benchmarks, and validate voice and full-topology recovery.

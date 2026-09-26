@@ -1,0 +1,32 @@
+{
+  "as_of_utc": "2026-09-26T21:42:16.746637+00:00",
+  "source": "Existing deployed combined audit plus direct source inventory",
+  "components_requested": 7,
+  "components_retrieved": 7,
+  "expected_guests_running": true,
+  "expected_containers": 11,
+  "expected_containers_running": true,
+  "embedding_dimensions": 2560,
+  "qdrant_status": "green",
+  "points_count": 101,
+  "indexed_sources": {
+    "homelab-master.md": 19,
+    "homelab-operations.md": 82
+  },
+  "semantic_query_returned_results": true,
+  "historical_expansion": {
+    "as_of_utc": "2026-09-26T08:57:32Z",
+    "added_documents": 27,
+    "added_chunks": 135,
+    "points_count": 235,
+    "retrieval_checks_passed": 28,
+    "retrieval_checks_total": 28
+  },
+  "discrepancy": "Historical expansion sources are absent from the later live index; processed files remain. Cause and intent unverified.",
+  "limitations": [
+    "Not a restore test",
+    "Not an authentication or security audit",
+    "A successful semantic query does not establish corpus completeness",
+    "Live deployment unchanged"
+  ]
+}

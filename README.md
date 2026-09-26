@@ -1,50 +1,50 @@
 # Local AI Lab
 
-A self-hosted AI environment built and operated by Logan: Open WebUI on Basecamp, Ollama on the main Windows PC, and integrated voice, specialized assistants, and homelab diagnostics.
+A working self-hosted AI environment built and operated by Logan: Open WebUI on Basecamp, Ollama and ComfyUI on the main Windows PC, dedicated GPU embeddings, and tools that retrieve knowledge and inspect the lab.
 
-This repository documents an existing personal lab. It separates operational evidence, owner-confirmed capabilities, and future work. Reviewed September 25, 2026.
+**Updated September 26, 2026.** This portfolio distinguishes live observations, historical tests, and unfinished validation.
 
 ## Architecture
 
 ```mermaid
 flowchart LR
-    User[User browser] --> UI[Open WebUI on Basecamp]
-    UI --> Ollama[Ollama on main Windows PC]
-    UI --> Tools[Homelab OpenAPI tools]
-    Tools --> Docker[Docker status]
-    Tools --> Prometheus[Prometheus metrics]
-    Voice[Isolated voice test WebUI] --> STT[Faster-Whisper on main PC]
-    Voice --> TTS[Kokoro on main PC]
-    Voice --> Ollama
+    User["User"] --> UI["Open WebUI on Basecamp"]
+    UI --> Ollama["Ollama on main Windows PC"]
+    UI --> Comfy["ComfyUI / FLUX on main Windows PC"]
+    UI --> API["Homelab API"]
+    API --> Live["Docker / Proxmox / Prometheus"]
+    API --> Embed["Qwen3-Embedding-4B on ai-worker"]
+    API --> Qdrant["Qdrant on core-services"]
+    Inbox["Samba document inbox"] --> Ingest["systemd ingestion"]
+    Ingest --> Embed
+    Ingest --> Qdrant
 ```
 
-The production WebUI and isolated voice test have separate data. Image generation is working according to the owner; its backend is intentionally omitted until a sanitized configuration is available.
+## Implemented and evidenced
 
-## Implemented
-
-| Area | Evidence and scope |
+| Area | Current evidence |
 | --- | --- |
-| Split inference and application hosting | User-confirmed topology and historical service/model-list output |
-| Model evaluation | Repeated owner-reported comparisons across Gemma, DeepSeek, GPT, and Qwen; current preference is the locally installed `qwen3.6:35b` |
-| Voice | Faster-Whisper STT and Kokoro TTS; cleaner speech confirmed in an isolated development WebUI |
-| Specialized assistants | Research, homelab diagnostics, and 3D print design profiles documented in the setup history |
-| Live diagnostics | FastAPI/OpenAPI integration tested from Open WebUI, including disk I/O |
-| Image generation | Owner-confirmed working capability; backend and repeatable test details not yet published |
+| Chat | Ollama on the main PC; owner preference is the local tag `qwen3.6:35b` |
+| Image generation | ComfyUI 0.37.0, saved FLUX Dev workflow, installed model assets, successful generation logs |
+| Dedicated embeddings | RTX 3060 passthrough to ai-worker; Qwen3-Embedding-4B; 2560-dimensional request succeeded |
+| Semantic knowledge | Samba ingestion, Qdrant, provenance-bearing search, and health checks |
+| Live tools | Thirteen API operations, including Proxmox inventory and a combined audit |
+| Specialized assistants | Research, homelab diagnostics, and 3D print design profiles |
+| Voice | Historical Faster-Whisper/Kokoro tests; current full path and recovery not revalidated |
 
-These are configured assistants and integrations, not claims of training foundation models. No claim of parity with a hosted AI product is made.
+The morning knowledge expansion recorded 27 documents / 135 chunks and 28/28 retrieval checks. A later live check found only the two baseline sources in the index. [The evidence record](docs/evidence.md) preserves this discrepancy rather than presenting the earlier total as current.
 
-## Documentation
+## Read the project
 
-- [Architecture and boundaries](docs/architecture.md)
-- [Model evaluation and evidence](docs/model-evaluation.md)
-- [Voice integration](docs/voice.md)
-- [Assistant profiles and image generation](docs/assistants.md)
-- [Operations and troubleshooting](docs/operations.md)
-- [Security and publication scope](docs/security.md)
-- [Evidence and roadmap](docs/evidence.md)
+- [Architecture](docs/architecture.md)
+- [Image generation and workflow snapshot](docs/image-generation.md)
+- [Knowledge pipeline and evaluation](docs/knowledge.md)
+- [Model evaluation](docs/model-evaluation.md)
+- [Voice history and current limits](docs/voice.md)
+- [Assistant profiles](docs/assistants.md)
+- [Operations](docs/operations.md) · [Security](docs/security.md)
+- [Dated evidence](docs/evidence.md)
 
-Related projects: [Basecamp infrastructure](https://github.com/soonerbear22-ux/basecamp-homelab) · [Homelab API source](https://github.com/soonerbear22-ux/homelab-api)
+Related: [Basecamp infrastructure](https://github.com/soonerbear22-ux/basecamp-homelab) · [Homelab API source and tests](https://github.com/soonerbear22-ux/homelab-api)
 
-## Repository scope
-
-This is a sanitized engineering case study, not a one-command deployment. Private addresses, credentials, databases, chat logs, and model weights are excluded. Exact versions, benchmark exports, and reproducible deployment manifests remain follow-up work.
+These are configured integrations and assistant profiles, not newly trained foundation models. No standardized model ranking or hosted-product parity claim is made. Private knowledge contents, endpoints, model weights, and credentials are excluded.

@@ -2,25 +2,27 @@
 
 [Home](../README.md)
 
-## Current roles
+## Placement as of September 26
 
 | System | Responsibility |
 | --- | --- |
-| Main Windows PC | Ollama inference; voice services used during the isolated voice test |
-| Basecamp / core-services | Docker-hosted Open WebUI and supporting homelab services |
-| Homelab API | Six GET operations for live status and metric history |
-| Prometheus | Historical resource metrics and disk I/O inputs |
+| Main Windows PC | Ollama chat inference and ComfyUI image generation |
+| Basecamp / core-services VM 100 | Open WebUI, Open Terminal, Homelab API, Qdrant, document ingestion, supporting services |
+| Basecamp / ai-worker VM 102 | RTX 3060 12 GB passthrough and Qwen3-Embedding-4B through TEI |
+| Basecamp / Pi-hole LXC 101 | Separate DNS filtering |
 
-Separating the interface from inference allows the services host to stay available independently. Responses requiring Ollama still depend on the main PC being awake, the service running, and the network path working.
+The main PC's ComfyUI log identifies an AMD Radeon RX 7900 XTX with approximately 24 GB VRAM and 64 GB system RAM. This is distinct from Basecamp's NVIDIA embedding GPU.
 
-Open WebUI connects to Ollama directly. Private connection details are not published. The API supplies live data rather than expecting a knowledge document to describe changing CPU, memory, or process state.
+## Requests and data flow
 
-## Evolution
+Chat requests go from WebUI to Ollama. The recorded image integration sends jobs to ComfyUI using an API workflow. A saved editor-format FLUX workflow was inspected; its sanitized copy is included separately.
 
-Open WebUI previously ran on a Raspberry Pi. Historical reboot and power-recovery tests belong to that earlier layout. Open WebUI now runs on Basecamp; those old results do not verify recovery of the current deployment.
+Knowledge queries go through Homelab API to ai-worker for embeddings, then Qdrant for matching chunks with source metadata. Live operational questions use diagnostic endpoints rather than treating old knowledge as current telemetry.
 
-Voice troubleshooting used a separate development WebUI with its own data while preserving the production instance. This distinction matters when interpreting successful voice tests.
+Documents follow the Samba inbox and systemd ingestion path. The indexed corpus must be verified separately from the source files and ingestion-state records.
 
-## Boundaries
+## Historical boundaries
 
-Image generation is owner-confirmed but its backend placement has not been recovered. No backend is invented in the architecture. This repository also does not claim high availability, Internet-facing hosting, or a fully automated rebuild.
+Open WebUI previously ran on a Raspberry Pi. Successful power-recovery reports from that era do not establish recovery of the current topology.
+
+Voice troubleshooting used a separate development WebUI. The September 26 inventory did not contain that historical test container, so it is not shown as a current deployed component. The production WebUI remained healthy in the reviewed record.

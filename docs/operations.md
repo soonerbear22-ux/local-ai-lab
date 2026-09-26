@@ -19,6 +19,14 @@ In the earlier Raspberry Pi + Windows topology, the owner reported successful si
 
 This is a historical observation, not a current Basecamp recovery-time objective. Current Basecamp and voice-service recovery still need an explicitly recorded test.
 
+## September 26 operational changes
+
+The current API can retrieve seven infrastructure component groups in one request and report partial failures. Knowledge health checks make real embedding and vector-query requests. The Basecamp GPU is assigned to embeddings, and the main PC handles ComfyUI image jobs.
+
+The knowledge expansion's morning result differs from the current index. Compare source filenames, hashes, chunk counts, processed files, and actual retrieval before reingestion. A green Qdrant collection and a nonempty search result do not prove corpus completeness. See [knowledge evidence](knowledge.md).
+
+An enabled daily Proxmox backup job covers core-services and Pi-hole, but the inspected job excludes ai-worker. Off-host recovery and isolated restoration remain unverified.
+
 ## Next operational evidence
 
 Capture sanitized versions, service ownership, startup dependencies, backup scope, a restore test, and current-topology recovery behavior. Avoid publishing configuration databases or raw diagnostic exports that include credentials or private network information.

@@ -31,3 +31,7 @@ For the next evaluation, record:
 | Several runs and failures | Show variability rather than a best-case result |
 
 Publish sanitized raw results alongside the methodology before adding comparative charts. This plan is not a claim that a standardized suite has already been run.
+
+## September 26 review
+
+No new controlled chat-model benchmark was recovered during this update. Dedicated Qwen3-Embedding-4B retrieval and ComfyUI/FLUX image generation are separate workloads; their validation results do not establish a new ranking of the chat models above.
