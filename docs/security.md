@@ -14,4 +14,4 @@ Model-generated instructions and retrieved documents should be treated as untrus
 
 The public workflow has a neutral replacement prompt and excludes generated images and model weights. Internal knowledge contains operational facts and stays private; only aggregate validation evidence is published. Returned source text is untrusted content and should not gain execution privileges through a tool-using assistant.
 
-The public API source verifies Proxmox certificates, while the inspected running copy disabled that verification. The public correction has not been deployed. The API's expanded read operations do not establish authentication at its inbound boundary or least privilege on upstream credentials.
+The public API source verifies Proxmox certificates as a publication adaptation. This has not been deployed; live trust configuration remains private. The API's expanded read operations do not establish authentication at its inbound boundary or least privilege on upstream credentials.
