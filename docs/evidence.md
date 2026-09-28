@@ -1,5 +1,12 @@
 # Evidence record
 
+## Latest recorded baseline and repair
+
+The Basecamp V1 capture at 01:13 UTC September 27 supersedes the earlier inventory below: **34 distinct sources / 244 points**, including retained validation content, and guest backups covering **100, 101 and 102**. These are dated measurements, not a fresh benchmark or proof of every source's retrieval quality. See the [immutable V1 validation](https://github.com/soonerbear22-ux/basecamp-homelab/blob/v1.0.0/docs/validation-v1.md).
+
+On September 27 local time, the workstation was known as **Citadel**. Open WebUI's saved Ollama URL still referenced an unreachable previous endpoint. After a database backup, updating only that saved connection through the application API restored six models and custom assistants without restarting or resetting WebUI. All 99 chats and the account matched the backup. The disabled OpenAI connection was not an alternate local inference backend. See [the incident and physical installation record](https://github.com/soonerbear22-ux/basecamp-homelab/blob/main/docs/changes/2026-09-27.md).
+
+
 [Home](../README.md)
 
 Updated September 26, 2026 from project conversations, the knowledge-expansion report/manifests, local ComfyUI files and logs, the deployed API source, and a fresh read-only audit. This is not an exhaustive export of every saved memory.
@@ -17,7 +24,7 @@ Updated September 26, 2026 from project conversations, the knowledge-expansion r
 | Voice | Historical listening tests; later partial service inventory | Full current voice path and reboot behavior unverified |
 | Assistant profiles | Recorded configuration history | Per-profile model assignments not freshly inspected |
 
-## Unresolved discrepancy
+## Historical discrepancy
 
 The morning report recorded 235 points. The later live source inventory found only `homelab-master.md` and `homelab-operations.md`, totaling 101. Processed runbooks survive. The cause and intent of the intervening change are unknown; no reingestion or database alteration was performed in this publication task.
 

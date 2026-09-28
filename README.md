@@ -1,16 +1,16 @@
 # Local AI Lab
 
-A working self-hosted AI environment built and operated by Logan: Open WebUI on Basecamp, Ollama and ComfyUI on the main Windows PC, dedicated GPU embeddings, and tools that retrieve knowledge and inspect the lab.
+A working self-hosted AI environment built and operated by Logan: Open WebUI on Basecamp, Ollama and ComfyUI on the Citadel Windows workstation, dedicated GPU embeddings, and tools that retrieve knowledge and inspect the lab.
 
-**Updated September 26, 2026.** This portfolio distinguishes live observations, historical tests, and unfinished validation.
+**Documentation updated September 28, 2026**, including September 27 operating work. This portfolio distinguishes live observations, historical tests, and unfinished validation.
 
 ## Architecture
 
 ```mermaid
 flowchart LR
     User["User"] --> UI["Open WebUI on Basecamp"]
-    UI --> Ollama["Ollama on main Windows PC"]
-    UI --> Comfy["ComfyUI / FLUX on main Windows PC"]
+    UI --> Ollama["Ollama on Citadel Windows workstation"]
+    UI --> Comfy["ComfyUI / FLUX on Citadel Windows workstation"]
     UI --> API["Homelab API"]
     API --> Live["Docker / Proxmox / Prometheus"]
     API --> Embed["Qwen3-Embedding-4B on ai-worker"]
@@ -32,7 +32,9 @@ flowchart LR
 | Specialized assistants | Research, homelab diagnostics, and 3D print design profiles |
 | Voice | Historical Faster-Whisper/Kokoro tests; current full path and recovery not revalidated |
 
-The morning knowledge expansion recorded 27 documents / 135 chunks and 28/28 retrieval checks. A later live check found only the two baseline sources in the index. [The evidence record](docs/evidence.md) preserves this discrepancy rather than presenting the earlier total as current.
+The final Basecamp V1 capture recorded 34 sources / 244 points, including retained validation documents. Earlier September 26 inventories differed; [the evidence record](docs/evidence.md) preserves those historical observations. Counts are dated measurements, not corpus-quality or uptime guarantees.
+
+Citadel's renamed backend connection was repaired in Open WebUI; six models and custom assistants returned while all 99 chats were preserved. See [operations](docs/operations.md).
 
 ## Read the project
 

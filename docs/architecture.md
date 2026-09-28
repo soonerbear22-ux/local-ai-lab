@@ -2,11 +2,11 @@
 
 [Home](../README.md)
 
-## Placement as of September 26
+## Placement (workstation naming updated September 27)
 
 | System | Responsibility |
 | --- | --- |
-| Main Windows PC | Ollama chat inference and ComfyUI image generation |
+| Citadel — Windows workstation | Ollama chat inference and ComfyUI image generation |
 | Basecamp / core-services VM 100 | Open WebUI, Open Terminal, Homelab API, Qdrant, document ingestion, supporting services |
 | Basecamp / ai-worker VM 102 | RTX 3060 12 GB passthrough and Qwen3-Embedding-4B through TEI |
 | Basecamp / Pi-hole LXC 101 | Separate DNS filtering |

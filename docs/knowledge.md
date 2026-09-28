@@ -1,5 +1,12 @@
 # Knowledge pipeline and retrieval evidence
 
+## Latest recorded baseline and repair
+
+The Basecamp V1 capture at 01:13 UTC September 27 supersedes the earlier inventory below: **34 distinct sources / 244 points**, including retained validation content, and guest backups covering **100, 101 and 102**. These are dated measurements, not a fresh benchmark or proof of every source's retrieval quality. See the [immutable V1 validation](https://github.com/soonerbear22-ux/basecamp-homelab/blob/v1.0.0/docs/validation-v1.md).
+
+On September 27 local time, the workstation was known as **Citadel**. Open WebUI's saved Ollama URL still referenced an unreachable previous endpoint. After a database backup, updating only that saved connection through the application API restored six models and custom assistants without restarting or resetting WebUI. All 99 chats and the account matched the backup. The disabled OpenAI connection was not an alternate local inference backend. See [the incident and physical installation record](https://github.com/soonerbear22-ux/basecamp-homelab/blob/main/docs/changes/2026-09-27.md).
+
+
 [Home](../README.md) · [Basecamp pipeline](https://github.com/soonerbear22-ux/basecamp-homelab/blob/main/docs/knowledge-pipeline.md)
 
 ## Implemented path
@@ -16,7 +23,7 @@ At 08:57 UTC on September 26, the verified expansion added 27 documents / 135 ch
 
 These are targeted retrieval checks, not an independent benchmark or complete evaluation of generated answers. One provenance section was clarified and reingested during evaluation.
 
-## Later current-state check
+## Earlier September 26 evening check
 
 At 21:42 UTC, the live collection was green and a real semantic query returned a result, but the total was 101. Direct inventory found master knowledge (19 points) and operations knowledge (82 points) only.
 
