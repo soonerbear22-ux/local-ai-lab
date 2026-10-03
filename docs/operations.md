@@ -37,3 +37,10 @@ The earlier inspected daily backup job covered core-services and Pi-hole but exc
 ## Next operational evidence
 
 Capture sanitized versions, service ownership, startup dependencies, backup scope, a restore test, and current-topology recovery behavior. Avoid publishing configuration databases or raw diagnostic exports that include credentials or private network information.
+
+
+## October 3 role-name and knowledge notes
+
+Current role names use Hornburg for the Proxmox host, Elros for the Windows workstation, and Bombadil for the AI-worker role. Historical records may still use Basecamp, Citadel, and ai-worker because those names identify underlying hosts/guests or earlier documentation.
+
+The Arda operations document is now part of the private semantic knowledge corpus. Recovery work confirmed that the watched inbox should not be used as an editing workspace: stage documents elsewhere, pause the path watcher when necessary, and move only completed sources into the inbox for deliberate ingestion.
