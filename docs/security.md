@@ -15,3 +15,10 @@ Model-generated instructions and retrieved documents should be treated as untrus
 The public workflow has a neutral replacement prompt and excludes generated images and model weights. Internal knowledge contains operational facts and stays private; only aggregate validation evidence is published. Returned source text is untrusted content and should not gain execution privileges through a tool-using assistant.
 
 The public API source verifies Proxmox certificates as a publication adaptation. This has not been deployed; live trust configuration remains private. The API's expanded read operations do not establish authentication at its inbound boundary or least privilege on upstream credentials.
+
+
+## Knowledge-ingestion secret guard
+
+On October 3, the ingestion pipeline gained a filename-level guard for common secret-bearing filenames, including password, credential, recovery-code, private-key and environment-file patterns. Matching files are rejected before extraction or embedding.
+
+This control reduces accidental indexing risk but is intentionally described as a heuristic. It does not inspect arbitrary document contents for secrets, so private source review and publication hygiene remain required.
