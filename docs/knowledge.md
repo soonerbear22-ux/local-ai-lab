@@ -32,3 +32,12 @@ The 27 runbook files remain in the processed folder. Their local batch copies, m
 ## Reliability limits
 
 The three-second pre-start delay mitigated the tested Samba transfer race but does not prove arbitrary files are complete. Source replacement embeds first, then deletes and upserts separately, leaving a failure window after deletion. A processed file, state entry, or healthy database does not independently prove successful current retrieval.
+
+
+## October 3 recovery and hardening
+
+The watched inbox is activated by a systemd `DirectoryNotEmpty` path unit, so files can be consumed almost immediately after they appear. During recovery work, the watcher was paused and the replacement document was staged outside the inbox before a deliberate one-time ingest.
+
+The Arda operations document was recovered, rebuilt and reingested. The final controlled ingest produced 23 chunks. The staged and processed copies had matching SHA-256 values, and an exact Qdrant source count also returned 23 points.
+
+A private recovery-code file was discovered in the corpus during the same maintenance session. It was removed from the knowledge tree and its Qdrant points and state entry were deleted. The ingestion script now rejects filenames containing common password, secret, credential, recovery-code, private-key and environment-file indicators before embedding. This is a filename-based preventive control, not full content secret detection.
