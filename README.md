@@ -1,6 +1,6 @@
 # Local AI Lab
 
-A working self-hosted AI environment built and operated by Logan: Open WebUI on Basecamp, Ollama and ComfyUI on the Citadel Windows workstation, dedicated GPU embeddings, and tools that retrieve knowledge and inspect the lab.
+A working self-hosted AI environment built and operated by Logan: Open WebUI on Basecamp, Ollama and ComfyUI on the Elros Windows workstation (historically Citadel), dedicated GPU embeddings, and tools that retrieve knowledge and inspect the lab.
 
 **Documentation updated October 3, 2026**, including the Arda knowledge recovery and ingestion hardening work. This portfolio distinguishes live observations, historical tests, and unfinished validation.
 
@@ -10,7 +10,7 @@ A working self-hosted AI environment built and operated by Logan: Open WebUI on 
 flowchart LR
     User["User"] --> UI["Open WebUI on Basecamp"]
     UI --> Ollama["Ollama on Citadel Windows workstation"]
-    UI --> Comfy["ComfyUI / FLUX on Citadel Windows workstation"]
+    UI --> Comfy["ComfyUI / FLUX on Elros Windows workstation"]
     UI --> API["Homelab API"]
     API --> Live["Docker / Proxmox / Prometheus"]
     API --> Embed["Qwen3-Embedding-4B on ai-worker"]
@@ -32,7 +32,7 @@ flowchart LR
 | Specialized assistants | Research, homelab diagnostics, and 3D print design profiles |
 | Voice | Historical Faster-Whisper/Kokoro tests; current full path and recovery not revalidated |
 
-The final Basecamp V1 capture recorded 34 sources / 244 points, including retained validation documents. On October 3, the live knowledge pipeline was additionally hardened with a secret-bearing filename guard and a controlled recovery/reingestion workflow for the Arda operations document. Earlier September 26 inventories differed; [the evidence record](docs/evidence.md) preserves those historical observations. Counts are dated measurements, not corpus-quality or uptime guarantees.
+The final Basecamp V1 capture recorded 34 sources / 244 points, including retained validation documents. Current role names use **Hornburg** for the Proxmox host, **Elros** for the Windows workstation, and **Bombadil** for VM 102's AI-worker role; underlying OS hostnames may remain unchanged. On October 3, the live knowledge pipeline was additionally hardened with a secret-bearing filename guard and a controlled recovery/reingestion workflow for the Arda operations document. Earlier September 26 inventories differed; [the evidence record](docs/evidence.md) preserves those historical observations. Counts are dated measurements, not corpus-quality or uptime guarantees.
 
 Citadel's renamed backend connection was repaired in Open WebUI; six models and custom assistants returned while all 99 chats were preserved. See [operations](docs/operations.md).
 
