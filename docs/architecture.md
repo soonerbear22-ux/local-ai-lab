@@ -2,14 +2,15 @@
 
 [Home](../README.md)
 
-## Placement (workstation naming updated September 27)
+## Placement (role naming updated October 3)
 
 | System | Responsibility |
 | --- | --- |
-| Citadel — Windows workstation | Ollama chat inference and ComfyUI image generation |
-| Basecamp / core-services VM 100 | Open WebUI, Open Terminal, Homelab API, Qdrant, document ingestion, supporting services |
-| Basecamp / ai-worker VM 102 | RTX 3060 12 GB passthrough and Qwen3-Embedding-4B through TEI |
-| Basecamp / Pi-hole LXC 101 | Separate DNS filtering |
+| Elros — Windows workstation (historically Citadel) | Ollama chat inference and ComfyUI image generation |
+| Hornburg / core-services VM 100 | Open WebUI, Open Terminal, Homelab API, Qdrant, document ingestion, supporting services |
+| Hornburg / Bombadil (ai-worker VM 102) | RTX 3060 12 GB passthrough and Qwen3-Embedding-4B through TEI |
+| Hornburg / Pi-hole LXC 101 | Separate DNS filtering |
+| Hornburg / Arda VM 105 | Dedicated AzerothCore WotLK realm; documented in Basecamp infrastructure repo |
 
 The main PC's ComfyUI log identifies an AMD Radeon RX 7900 XTX with approximately 24 GB VRAM and 64 GB system RAM. This is distinct from Basecamp's NVIDIA embedding GPU.
 
