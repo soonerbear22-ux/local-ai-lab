@@ -31,3 +31,10 @@ The morning report recorded 235 points. The later live source inventory found on
 ## Next evidence to capture
 
 Reconcile the current source inventory, repeat selected retrieval checks, export a sanitized WebUI image API workflow, record controlled model/image benchmarks, and validate voice and full-topology recovery.
+
+
+## October 3 knowledge recovery evidence
+
+A controlled Arda document recovery was completed with the automatic inbox watcher paused. The final staged and processed files matched by SHA-256, the ingestion state recorded 23 chunks, and an exact Qdrant source count independently returned 23 points. The watcher was then returned to active state.
+
+The same session removed accidentally indexed recovery material from the private corpus and added a preventive filename guard to the ingester. No recovery codes or other secret values are published here.
