@@ -3,7 +3,7 @@
 [Home](../README.md)
 
 
-## Latest recorded baseline and repair
+## Historical V1 baseline and September 27 repair
 
 The Basecamp V1 capture at 01:13 UTC September 27 supersedes the earlier inventory below: **34 distinct sources / 244 points**, including retained validation content, and guest backups covering **100, 101 and 102**. These are dated measurements, not a fresh benchmark or proof of every source's retrieval quality. See the [immutable V1 validation](https://github.com/soonerbear22-ux/basecamp-homelab/blob/v1.0.0/docs/validation-v1.md).
 
@@ -24,15 +24,15 @@ A recorded “model not found” investigation examined the model list and WebUI
 
 In the earlier Raspberry Pi + Windows topology, the owner reported successful simultaneous reboot and power-off recovery. The complete power recovery took roughly five minutes and required Windows login without manual service starts.
 
-This is a historical observation, not a current Basecamp recovery-time objective. The later Basecamp V1 record documents host reboot recovery; complete voice-service recovery remains unverified.
+This is a historical observation, not a current Hornburg/AI recovery-time objective. The later Basecamp V1 record documents host reboot recovery; complete voice-service recovery remains unverified.
 
 ## September 26 operational changes
 
-The current API can retrieve seven infrastructure component groups in one request and report partial failures. Knowledge health checks make real embedding and vector-query requests. The Basecamp GPU is assigned to embeddings, and the main PC handles ComfyUI image jobs.
+The September 26 API observation could retrieve seven infrastructure component groups in one request and report partial failures. Knowledge health checks make real embedding and vector-query requests. The Basecamp GPU was assigned to embeddings, and the main PC handles ComfyUI image jobs.
 
-The knowledge expansion's morning result differs from the current index. Compare source filenames, hashes, chunk counts, processed files, and actual retrieval before reingestion. A green Qdrant collection and a nonempty search result do not prove corpus completeness. See [knowledge evidence](knowledge.md).
+The knowledge expansion's morning result differed from the September 26 evening index. Compare source filenames, hashes, chunk counts, processed files, and actual retrieval before reingestion. A green Qdrant collection and a nonempty search result do not prove corpus completeness. See [knowledge evidence](knowledge.md).
 
-The earlier inspected daily backup job covered core-services and Pi-hole but excluded ai-worker. The later V1 capture documented coverage for all three guests, superseding that earlier scope. Off-host recovery and isolated restoration remain unverified.
+The earlier inspected daily backup job covered core-services and Pi-hole but excluded ai-worker. The later V1 capture documented coverage for all three guests, superseding that earlier scope. Off-host recovery and isolated restoration were unverified in that September 26 scope. Current infrastructure restore evidence belongs to the Homelab repository; AI application-consistency acceptance remains separate.
 
 ## Next operational evidence
 
@@ -43,4 +43,12 @@ Capture sanitized versions, service ownership, startup dependencies, backup scop
 
 Current role names use Hornburg for the Proxmox host, Elros for the Windows workstation, and Bombadil for the AI-worker role. Historical records may still use Basecamp, Citadel, and ai-worker because those names identify underlying hosts/guests or earlier documentation.
 
-The Arda operations document is now part of the private semantic knowledge corpus. Recovery work confirmed that the watched inbox should not be used as an editing workspace: stage documents elsewhere, pause the path watcher when necessary, and move only completed sources into the inbox for deliberate ingestion.
+The October 3 selected-source check confirmed one recovered operations document in the private semantic knowledge corpus; current corpus completeness remains unverified. Recovery work confirmed that the watched inbox should not be used as an editing workspace: stage documents elsewhere, pause the path watcher when necessary, and move only completed sources into the inbox for deliberate ingestion.
+
+## Canonical operating and recovery limits
+
+Before any separately authorized change, identify actual host/account, nonsecret effective configuration and installed revision. A lost management connection is an access gap, not service failure. Stage completed sources outside the watched inbox; reconcile exact bytes, state and vector generations before retrying a partial ingestion. Do not reset state or Qdrant as a shortcut.
+
+Recovery planning must preserve consistent source/processed/state and Qdrant revisions, embedding configuration, WebUI database/tool/model settings, and engineer source/configuration/receipts and protected approval material. Generic app-data copying does not prove database consistency. Recorded cron/flock supervision does not prove actual bridge reboot recovery. Host/guest restore evidence does not substitute for AI application acceptance.
+
+The historical inventory collector has a narrow container scope; its timer is an alternative to cron, not proof of two active schedulers. Automatic publication was not established. Future closeout should consider affected public repositories alongside canonical updates, while keeping publication, deployment, Project adoption, ingestion and retrieval as separate outcomes. Ongoing workflow creation is the next dedicated job and is not built here.

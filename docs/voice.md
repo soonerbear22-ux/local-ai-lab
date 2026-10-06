@@ -17,3 +17,7 @@ Current Whisper process state, exact endpoint settings, end-to-end voice behavio
 ## Next validation
 
 Test microphone capture, transcription, response text, synthesis, and browser playback separately. Use a short fixed utterance and a longer reply. Record results without publishing private recordings. Verify startup after reboot before claiming recovery is complete.
+
+## October 6 canonical limit
+
+Voice/image workloads remain associated with Elros. The canonical package supplies no newer accepted end-to-end voice path, loaded TTS configuration or reboot result. The historical Faster-Whisper/Kokoro listening observations above remain dated evidence; they are not current service-health claims. No voice test ran during documentation synchronization.

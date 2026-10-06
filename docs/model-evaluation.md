@@ -4,7 +4,7 @@
 
 ## Recorded model history
 
-The owner reports repeated comparisons across Gemma, DeepSeek, GPT, and Qwen, with a current preference described as “qwen35b.”
+The owner reports repeated comparisons across Gemma, DeepSeek, GPT, and Qwen, with a historical preference described as “qwen35b.”
 
 Historical Ollama output identifies the local tag as **`qwen3.6:35b`**, with 35.5B parameters and Q4_K_M quantization. This is a recorded local model identifier, not a claim about an official upstream release or download location.
 
@@ -35,3 +35,7 @@ Publish sanitized raw results alongside the methodology before adding comparativ
 ## September 26 review
 
 No new controlled chat-model benchmark was recovered during this update. Dedicated Qwen3-Embedding-4B retrieval and ComfyUI/FLUX image generation are separate workloads; their validation results do not establish a new ranking of the chat models above.
+
+## October 3 engineer acceptance limit
+
+The canonical observation records `qwen3.6:35b` in the engineer profile and one saved `live_guest_state` PASS. Complete model acceptance, fresh WebUI integration and a current Ollama inventory remain unresolved. No new benchmark or model-selection change ran in this synchronization.

@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Sanitized editor workflow](../workflows/flux1-dev-editor.example.json)
 
-## Recovered implementation
+## Historical implementation — September 26 review
 
-ComfyUI runs on the main Windows PC. The inspected local version is 0.37.0. Startup output identifies an AMD Radeon RX 7900 XTX with about 24 GB VRAM. The local files include FLUX.1 Dev and Schnell diffusion weights, CLIP-L, a scaled FP8 T5 encoder, and a VAE.
+The September 26 record places ComfyUI on the Windows workstation, now called Elros (native Citadel in canonical evidence). The historically inspected local version was 0.37.0. Startup output identifies an AMD Radeon RX 7900 XTX with about 24 GB VRAM. The local files include FLUX.1 Dev and Schnell diffusion weights, CLIP-L, a scaled FP8 T5 encoder, and a VAE.
 
 The saved `FLUX1-Dev-OpenWebUI` editor graph selects:
 
@@ -31,3 +31,7 @@ Memory pressure and offloading were part of the latest troubleshooting discussio
 The included JSON is a sanitized copy of the saved **editor workflow**, not a confirmed Open WebUI API-format export. Personal prompt text was replaced with a neutral example, stale model-download metadata was removed, and graph links/settings were preserved. Graph structure was checked locally; no new image was generated to validate the sanitized prompt.
 
 Import into an isolated ComfyUI test workflow and review before use. Export the correct API format and verify WebUI field mappings before changing that integration. Model weights, generated images, private URLs, and installation files are not distributed.
+
+## October 6 evidence limit
+
+The canonical package retains Elros as the image-workload host but establishes no newer ComfyUI version, model selection or accepted API workflow. Historical Dev/Schnell assets and completed logs do not settle today's selected workflow. The sanitized editor snapshot remains unchanged; no image generation or deployment ran during synchronization.
